@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+        <main>
+            <section class="section-about_us">   
+                <div class="text-align-center margin-bottom-80px">
+                    <h1 class="title-first">
+                        <span class="title-first__main">о нашем проекте</span>
+                    </h1>
+                </div>
+                
+                <div class="row">
+                    <div class="about-card">
+                        
+                        <div class="about-card__box">
+                            <h3 class="title-third margin-bottom-10px"> в чем идея</h3>
+                            <p class="paragraph"> Описание проекта:
+                                Идея - приложение (CliN) - это помощник в решении одной из главных экологических проблем, а именно загрязнения окружающей среды.
+                                В приложении будет постоянно обновляться список заданий, за которые можно получить вознаграждение в виде купона или скидки у партнёров.
+                                Мы попытались сделать наш продукт в игровой форме (с уровнями, наградами и достижениями), чтобы охватить ещё и молодую аудиторию.
+                                <br>Как это работает?<br>
+                                Если человек захотел помочь своему городу стать чище, то ему достаточно скачать приложение CliN to Win и пройти простейшую регистрацию, чтобы получить возможность получать вознаграждение за свой труд на благо природы.
+                                 Процесс выполнения заданий несложен. Нужно выбрать, что именно пользователь хочет сделать, снять короткое видео в подтверждение своих действий, дождаться подтверждения с нашей стороны и всё! Продвижение по уровню в игровой системе CliN to Win и, главное, награда в виде купонов или скидок в сервисах партнёров.
+                                Решили добавить к функционалу сезонные задания, которые помогут справиться с проблемами, свойственными каждому времени года.
+                                 Кроме того, в приложении существует сообщество, где пользователи могут делиться своими историями. Это поможет коммуницировать пользователям между собой, объединяться и мотивировать друг друга на выполнение новых заданий.
+                                 <br>Для чего?<br>
+                                Главная цель нашего продукта - замотивировать людей помогать природе. Наш продукт уникален, мы совместили полезную уборку мусора с игровой деятельностью.
+                                 Всем хотелось бы гулять по чистому городу, купаться в чистой речке с аккуратным пляжем, но убираться мало кто хочет. Наше приложение будет мотивировать людей убирать мусор за собой и за другими.
+                                 <br>Кому выгодно?<br>
+                                Вознаграждение – то, что мотивирует людей становиться пользователями нашего приложения. Купоны, промокоды и скидки – всё это мы можем предложить людям, которые решили помогать планете вместе с нами. 
+                                 Если Вы хотите развить свой бизнес, то, проинвестировав в наш продукт, вы с лёгкостью получите новых клиентов.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-card">
+                        
+                        <div class="about-card__box">
+                            <h3 class="title-third margin-bottom-10px">Соцсети</h3>
+                            <p class="paragraph">  
+                                <a href="https://t.me/rekondr"><b>telegram:</b> @rekondr<br></a>
+                                <a href="https://t.me/Ilyshka_k"><b>telegram:</b> @Ilyshka_k<br></a>
+                                <a href="https://t.me/pablo_ersh"><b>telegram:</b> @pablo_ersh<br></a>
+                                <a href="mailto:kondratenkoalexey9@gmail.com"><b>email</b>: kondratenkoalexey9@gmail.com</a><br>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-about_author" >   
+                <div class="text-align-center margin-bottom-80px">
+                    <h1 class="title-first">
+                        <span class="title-first__main">Авторы проекта</span>
+                    </h1>
+                </div>
+                
+                <div class="row">
+                    <div class="about-card">
+                        <figure class="about-card__img">
+                            <img src="{% static '/welcome/images/author_3.jpg' %}" alt="persone">
+                            <figcaption class="about-card__name">Алексей
+                                Кондратенко</figcaption>
+                        </figure>
+                        <div class="about-card__box">
+                            <h3 class="title-third margin-bottom-10px">Frontend разработчик</h3>
+                            <p class="paragraph"> <i>"вместо пар хожу в зал"</i></p><br><br><br>
+                        </div>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="about-card">
+                        <figure class="about-card__img">
+                            <img src="{% static '/welcome/images/author_1.jpg' %}" alt="persone">
+                            <figcaption class="about-card__name">Ершов Павел</figcaption>
+                        </figure>
+                        <div class="about-card__box">
+                            <h3 class="title-third margin-bottom-10px">Backend разработчик</h3>
+                            <p class="paragraph"> <i>"Упал - не значит провал. Провал - это там где не встал."</i></p><br><br><br>
+                        </div>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="about-card">
+                        <figure class="about-card__img">
+                            <img src="{% static '/welcome/images/author_2.jpg' %}" alt="persone">
+                            <figcaption class="about-card__name">Горюнов Илья</figcaption>
+                        </figure>
+                        <div class="about-card__box">
+                            <h3 class="title-third margin-bottom-10px">Backend разработчик</h3>
+                            <p class="paragraph"> <i>"Побеждает всегда победитель. Проигравший проигрывает."</i></p><br><br><br>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+        </main>
+</body>
+{% endblock %}

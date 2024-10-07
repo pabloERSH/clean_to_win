@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <header class="header">
+            <img class="header__logo" src="{% static '/welcome/icons/icon-logo(2).svg' %}" alt="Логотип ">
+            <div class="header__box">
+                <h1 class="title-first">
+                    <span class="title-first__main">CLEAN TO WIN</span>
+                    <span class="title-first__secondary">сделаем мир лучше</span>
+                </h1>
+                <a href="#go_to_book" class="btn btn_animated">Регистрируйся!</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-about">
+                <div class="text-align-center margin-bottom-80px">
+                    <h2 class="title-secondary">
+                        чем мы занимаемся
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="title-third margin-bottom-10px">ИДЕЯ ПРИЛОЖЕНИЯ</h3>
+                        <p class="paragraph margin-bottom-30px">Идея - приложение (CliN) - это помощник в решении одной из главных экологических проблем, а именно загрязнения окружающей среды.
+                            В приложении будет постоянно обновляться список заданий, за которые можно получить вознаграждение в виде купона или скидки у партнёров.
+                            .</p>
+
+                        <h3 class="title-third margin-bottom-10px">КАК ИГРАТЬ</h3>
+                        <p class="paragraph margin-bottom-50px">Мы попытались сделать наш продукт в игровой форме (с уровнями, наградами и достижениями), чтобы охватить ещё и молодую аудиторию..</p>
+
+                        <a href="galary.html" class="btn-text">Узнать больше &rarr;</a>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <div class="composition">
+
+                            <img
+                            src="{% static '/welcome/images/composition_1.jpeg' %}"
+
+                            sizes="(max-width: 1240px) 23vw,
+                                    (max-width: 900px) 43vw
+                                    (max-width: 600px) 47vw, 300px"
+                            alt="Композиция-1"
+                            class="composition__photo composition__photo_n1">
+
+                            <img
+                            src="{% static '/welcome/images/composition_2.webp' %}"
+
+                            sizes="(max-width: 1240px) 23vw,
+                                    (max-width: 900px) 43vw
+                                    (max-width: 600px) 47vw, 300px"
+                            alt="Композиция-2"
+                            class="composition__photo composition__photo_n2">
+
+                            <img
+                            src="{% static '/welcome/images/composition_3.jpeg' %}"
+
+                            sizes="(max-width: 1240px) 23vw,
+                                    (max-width: 900px) 43vw
+                                    (max-width: 600px) 47vw, 300px"
+                            alt="Композиция-3"
+                            class="composition__photo composition__photo_n3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-adventure">
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="adventure-card">
+                            <i class="adventure-card__icon icon-Vector-3 margin-bottom-30px"></i>
+                            <h3 class="title-third margin-bottom-10px">Актуальность</h3>
+                            <p class="paragraph">Приложение отвечает на острую проблему загрязнения окружающей среды, которая волнует все больше людей.
+
+                                Использование игровых механик делает уборку мусора увлекательной и интересной, особенно для молодой аудитории.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="adventure-card">
+                            <i class="adventure-card__icon icon-Vector-2 margin-bottom-30px"></i>
+                            <h3 class="title-third margin-bottom-10px">Доступность</h3>
+                            <p class="paragraph">Простой и понятный интерфейс, лёгкая регистрация и прозрачный процесс выполнения заданий делают приложение доступным для каждого.
+
+                                Приложение всегда под рукой, что позволяет пользователям в любой момент выбрать задание</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="adventure-card">
+                            <i class="adventure-card__icon icon-Vector margin-bottom-30px"></i>
+                            <h3 class="title-third margin-bottom-10px">Экологичность</h3>
+                            <p class="paragraph">Приложение стимулирует конкретные действия по очистке окружающей среды, делая города чище.
+
+                                CliN способствует формированию ответственного отношения к природе и превращает заботу об экологии в часть повседневной жизни.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="adventure-card">
+                            <i class="adventure-card__icon icon-Vector-1 margin-bottom-30px"></i>
+                            <h3 class="title-third margin-bottom-10px">Выгода и Сообщество</h3>
+                            <p class="paragraph">Купоны и скидки от партнёров мотивируют пользователей активно участвовать в акциях по уборке.
+
+                                Сообщество в приложении позволяет обмениваться опытом, находить друзей и поддерживать друг друга </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section-tour">
+                <div class="text-align-center margin-bottom-80px">
+                    <h2 class="title-secondary" id ="go_to_popular">
+                        ИНТЕРЕСНЫЕ ЗАДАНИЯ
+                    </h2>
+                    <span class="title-first__secondary">присоединяйся и начинай</span>
+
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card-tour">
+                            <div class="card-tour__side card-tour__side_front">
+                                <div class="card-tour__img card-tour__img_1 margin-bottom-50px"></div>
+                                <h4 class="card-tour__title">
+                                     <span class="card-tour__span card-tour__span_1"> Индивидуальные </span>
+                                     <br>
+                                      <span class="card-tour__span card-tour__span_2">задания</span> </h4>
+                                <div class="card-tour__descr">
+                                    <ul>
+                                        <li>Разнообразие</li>
+                                        <li>Гибкость выполнения</li>
+                                        <li>Быстрое вознаграждение</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="card-tour__side card-tour__side_back">
+                                <div class="card-tour__backSide-box">
+                                    <p class="card-tour__text card-tour__text_1">Зеленый герой</p>
+                                    <p class="card-tour__text card-tour__text_2">Собери и выбрось мусор в урну на прогулке в парке.</p>
+
+                                    <a href="#go_to_book" class="btn btn_animated">Начать!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card-tour">
+                            <div class="card-tour__side card-tour__side_front">
+                                <div class="card-tour__img card-tour__img_2 margin-bottom-50px"></div>
+                                <h4 class="card-tour__title">
+                                     <span class="card-tour__span card-tour__span_1"> Задания </span>
+                                     <br>
+                                      <span class="card-tour__span card-tour__span_2">сообщества</span> </h4>
+                                <div class="card-tour__descr">
+                                    <ul>
+                                        <li>Объединяйся с друзьями</li>
+                                        <li>Увеличенные награды</li>
+                                        <li>Социальная активность</li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="card-tour__side card-tour__side_back">
+                                <div class="card-tour__backSide-box">
+                                    <p class="card-tour__text card-tour__text_1">Чистый парк</p>
+                                    <p class="card-tour__text card-tour__text_2">Проведите субботник в местном парке, собрав и выбросив мусор.</p>
+
+                                    <a href="#go_to_book" class="btn btn_animated">Начать!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card-tour">
+                            <div class="card-tour__side card-tour__side_front">
+                                <div class="card-tour__img card-tour__img_3 margin-bottom-50px"></div>
+                                <h4 class="card-tour__title">
+                                     <span class="card-tour__span card-tour__span_1"> Сезонные </span>
+                                     <br>
+                                      <span class="card-tour__span card-tour__span_2">ивенты</span> </h4>
+                                <div class="card-tour__descr">
+                                    <ul>
+                                        <li>Актуальность</li>
+                                        <li>Эксклюзивные награды</li>
+                                        <li>Единство</li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="card-tour__side card-tour__side_back">
+                                <div class="card-tour__backSide-box">
+                                    <p class="card-tour__text card-tour__text_1">Листопад</p>
+                                    <p class="card-tour__text card-tour__text_2">Соберите опавшие листья в парке или на своей улице, помогая сохранить чистоту.</p>
+
+                                    <a href="#go_to_book" class="btn btn_animated">Начать!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section-feedBack">
+                <div class="bg-gradient"></div>
+                <div class="text-align-center margin-bottom-80px">
+                    <h2 class="title-secondary title-secondary_white">
+                        Наша большая команда
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="feedBack-card">
+                        <figure class="feedBack-card__img">
+                            <img src="{% static '/welcome/images/feedBack-1.jpg' %}" alt="persone">
+                            <figcaption class="feedBack-card__name">ЛИЗА
+                                ФРОЛОВА</figcaption>
+                        </figure>
+                        <div class="feedBack-card__box">
+                            <h3 class="title-third margin-bottom-10px">Я ПОЛУЧИЛА МАССУ ВПЕЧАТЛЕНИЙ</h3>
+                            <p class="paragraph"> Ребята, вы просто не представляете, как круто быть частью CliN to Win! 🌳💪
+                                Вчера я решил выполнить задание "Чистый берег" и позвал с собой друзей. Представляете, за час мы собрали целых три мешка мусора! 😮 Конечно, было не так уж легко, но когда мы увидели, как преобразился берег, стало так приятно! 🤩
+
+                                А самое крутое - за это мы получили купоны на скидку в нашем любимом кафе! 🍕 Теперь и природу спасаем, и вкусно едим! 😋
+
+                                CliN to Win - это не просто приложение, это целое движение! Присоединяйтесь к нам, делайте мир чище и получайте за это классные бонусы!
+
+                                #CliNtoWin #ЭкоГерои #ЧистыйГород #ВознаграждениеЗаДобро</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="feedBack-card">
+                        <figure class="feedBack-card__img">
+                            <img src="{% static '/welcome/images/feedBack-2.jpg' %}" alt="persone">
+                            <figcaption class="feedBack-card__name">АНТОН
+                                РЯБИН</figcaption>
+                        </figure>
+                        <div class="feedBack-card__box">
+                            <h3 class="title-third margin-bottom-10px">ЭТО БЫЛО ВЕЛИКОЛЕПНО И НЕЗАБЫВАЕМО</h3>
+                            <p class="paragraph"> Кто сказал, что забота об экологии скучная? 🌿😎
+                                Я всегда старался сортировать мусор, но CliN to Win поднял мою "зеленую" игру на новый уровень! ♻️
+
+                                Вчера я выполнил задание "Мастер сортировки" и снял короткое видео, как я аккуратно раскладываю отходы по контейнерам.
+
+                                И знаете что? Получил купон на скидку в магазин eco-товаров! 🤩 Теперь у меня есть стильная многоразовая бутылка для воды, и я больше не покупаю пластиковые! 💧
+
+                                CliN to Win - это не просто приложение, это мотивация делать мир лучше и получать за это крутые бонусы!
+
+                                #CliNtoWin #ЭкоСтиль #СортировкаМусора #ЗеленаяПланета</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="text-align-center">
+                    <a href="feedback.html" class="btn btn_animated">еще отзывы</a>
+                </div>
+            </section>
+
+            <section class="section-book" id="go_to_book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <form action="" class="form"   onsubmit="return (checkForm());sendMessage(event)" name="userForm"  novalidate >
+                                <div class="text-align-center margin-bottom-30px">
+                                    <h2 class="title-secondary">
+                                        ПРИСОЕДИНИТЬСЯ К СООБЩЕСТВУ
+                                    </h2>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Имя Фамилия" id="name_surname" required  pattern="[А-ЯЁ]{1}[а-яё]{1,15}\s[А-ЯЁ]{1}[а-яё]{1,15}">
+                                    <span class="error" aria-live="polite"></span>
+                                    <label for="name_surname" class="form__label">Ваше Имя и Фамилия</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Ваш email" id="mail" required minlength="10">
+                                    <span class="error" aria-live="polite"></span>
+                                    <label for="mail" class="form__label">Ваш email</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <button href="feedback.html" type="submit" class="btn btn_brown" >Войти</button>
+                                </div>
+
+                                <div class="form__group-chat">
+                                    <ul id="messages"></ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+   <script src="{% static '/welcome/js/index.js' %}"></script>
+{% endblock %}

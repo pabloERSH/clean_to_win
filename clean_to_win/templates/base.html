@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static '/welcome/css/icon-font.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static '/welcome/css/style.css' %}">
+    <meta name="author" content="Kondratenko Alexey">
+    <meta name="keywords"  content="экология, уборка мусора">
+    <link rel="icon" href="{% static '/welcome/icons/icon-logo(2).svg' %}" type="image/x-icon">
+    <meta name="description"  content="Clean to win!">
+    <title>Clean to win</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toggle" id="navin-toggle">
+            <label for="navin-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    {% for key, value in menu.items %}
+                    <li class="navigation__item"><a href='{{ value }}' class="navigation__link">{{ key }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        {% block content %} {% endblock %}
+        <footer class="footer">
+            <div class="row text-align-center">
+                <a href="#">
+                    <img src="{% static '/welcome/icons/icon-logo(2).svg' %}" alt="logo" class="footer__logo">
+                </a>
+            </div>
+            <div class="row">
+                <ul class="footer__list">
+                    {% for key, value in menu.items %}
+                    <li class="footer__item"><a href='{{ value }}' class="footer__link">{{ key }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+</body>
