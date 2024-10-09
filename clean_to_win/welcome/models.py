@@ -1,7 +1,7 @@
 from django.db import models
 
 
-images_path = "static/images/"
+images_path = "static/welcome/images/"
 
 
 class Gallery(models.Model):
