@@ -10,107 +10,22 @@
                         <span class="title-first__main">отзывы наших клиентов</span>
                     </h1>
                 </div>
-                <div class="row">
+                {% for feedback in object_list %}
+                    <div class="row">
                     <div class="feedBack-card">
                         <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-1.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">ЛИЗА
-                                ФРОЛОВА</figcaption>
+                            <img src="{% static feedback.avatar_path %}" alt="{{ feedback.username }}">
+                            <figcaption class="feedBack-card__name"> {{ feedback.username }} </figcaption>
                         </figure>
                         <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">Я ПОЛУЧИЛА МАССУ ВПЕЧАТЛЕНИЙ</h3>
-                            <p class="paragraph"> "CliN to Win – это лучшее, что случалось с экологией и моим кошельком! Раньше уборка мусора казалась мне скучной и неблагодарной задачей, но это приложение изменило всё! Теперь я с удовольствием собираю пластик и батарейки, получая за это скидки в любимые кофейни и магазины. Круто, что можно соревноваться с друзьями и делиться своими достижениями. Спасибо, CliN to Win, за то, что делаете мир чище!"</p>
+                            <h3 class="title-third margin-bottom-10px">{{ feedback.short_msg }}</h3>
+                            <p class="paragraph">{{ feedback.text }}</p>
                         </div>
 
                     </div>
                 </div>
+                {% endfor %}
 
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-2.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">АНТОН
-                                РЯБИН</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">ЭТО БЫЛО ВЕЛИКОЛЕПНО И НЕЗАБЫВАЕМО</h3>
-                            <p class="paragraph">"Отличная идея и исполнение! Приятно, что можно внести свой вклад в защиту окружающей среды и получить за это бонусы. Приложение простое и удобное в использовании, верификация заданий проходит быстро. Единственное пожелание – добавить больше категорий заданий и партнёров, чтобы было из чего выбрать."</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-3.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">МИХАИЛ ЛЕБЕДЕВ</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">казалось, будто мы парим рядом с облаками</h3>
-                            <p class="paragraph"> "Раньше я думала, что подобные приложения созданы только для молодёжи. Но CliN to Win приятно удивил! Теперь я с удовольствием гуляю в парке, собираю мусор и получаю скидки на продукты в ближайшем супермаркете. Спасибо разработчикам за заботу об экологии и о нас!"</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-4.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">ЕКАТЕРИНА МЕЛЬНИКОВА</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">Мы смогли насладиться тишиной и спокойствием небес</h3>
-                            <p class="paragraph"> "CliN to Win – это бомба! Наконец-то уборка мусора превратилась в увлекательную игру! Соревнуюсь с одноклассниками, кто больше соберет пластиковых бутылок, а на выигранные купоны покупаем мороженое. Рекомендую всем скачать и присоединиться!"</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-5.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">АНТОН
-                                ГУНОВ</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">ЭТО БЫЛО ВЕЛИКОЛЕПНО И НЕЗАБЫВАЕМО</h3>
-                            <p class="paragraph">"CliN to Win – это глоток свежего воздуха в сфере эко-инициатив! Приложение не только мотивирует людей заботиться о природе, но и делает этот процесс увлекательным и полезным. Важно, что разработчики не останавливаются на достигнутом и постоянно совершенствуют функционал. Верю, что CliN to Win поможет сделать наш мир чище!"</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-6.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">ЛИЗА ЩАПИНА</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">самое захватывающее и незабываемое приключение</h3>
-                            <p class="paragraph"> "Как владелец небольшого кафе, я всегда ищу способы привлечь новых клиентов и сделать свой бизнес более экологичным. Сотрудничество с CliN to Win стало отличным решением! Мы предлагаем скидки пользователям приложения, а взамен получаем не только новых посетителей, но и вклад в чистоту нашего города. Рекомендую приложение и другим предпринимателям!"</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="feedBack-card">
-                        <figure class="feedBack-card__img">
-                            <img src="{% static '/welcome/images/feedBack-7.jpg' %}" alt="persone">
-                            <figcaption class="feedBack-card__name">АДЕЛЬ ВИЛЬНЕВА</figcaption>
-                        </figure>
-                        <div class="feedBack-card__box">
-                            <h3 class="title-third margin-bottom-10px">возможность наблюдать за животными и птицами</h3>
-                            <p class="paragraph">"CliN to Win – это не просто приложение, это целая философия! Теперь прогулки с ребёнком стали не только полезными для здоровья, но и увлекательными. Сын с удовольствием помогает мне собирать мусор, а я рассказываю ему о важности заботы об окружающей среде. Приятным бонусом стали скидки на детские товары. CliN to Win – отличный пример того, как можно совместить приятное с полезным!"</p>
-                        </div>
-                        
-                    </div>
-                </div>
                 <div class="text-align-center">
                     <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated">Присоединиться к проекту</a>
                 </div>
