@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block content %}
-        <header class="header">
-            <img class="header__logo" src="{% static '/welcome/icons/icon-logo(2).svg' %}" alt="Логотип ">
-            <div class="header__box">
+        <header class="header__main">
+            <img class="header__main__logo" src="{% static '/welcome/icons/icon-logo(2).svg' %}" alt="Логотип ">
+            <div class="header__main__box">
                 <h1 class="title-first">
                     <span class="title-first__main">CLEAN TO WIN</span>
                     <span class="title-first__secondary">сделаем мир лучше</span>
                 </h1>
-                <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated">Регистрируйся!</a>
+                <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated" target="_blank">Регистрируйся!</a>
             </div>
         </header>
 
@@ -31,7 +31,7 @@
                         <h3 class="title-third margin-bottom-10px">КАК ИГРАТЬ</h3>
                         <p class="paragraph margin-bottom-50px">Мы попытались сделать наш продукт в игровой форме (с уровнями, наградами и достижениями), чтобы охватить ещё и молодую аудиторию..</p>
 
-                        <a href="galary.html" class="btn-text">Узнать больше &rarr;</a>
+                        <a href="/gallery" class="btn-text">Узнать больше &rarr;</a>
                     </div>
 
                     <div class="col-1-of-2">
@@ -203,7 +203,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <section class="section-feedBack">
@@ -235,36 +234,22 @@
             </section>
 
             <section class="section-book" id="go_to_book">
-                <div class="row">
-                    <div class="book">
-                        <div class="book__form">
-                            <form action="" class="form"   onsubmit="return (checkForm());sendMessage(event)" name="userForm"  novalidate >
-                                <div class="text-align-center margin-bottom-30px">
-                                    <h2 class="title-secondary">
-                                        ПРИСОЕДИНИТЬСЯ К СООБЩЕСТВУ
-                                    </h2>
-                                </div>
-                                <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Имя Фамилия" id="name_surname" required  pattern="[А-ЯЁ]{1}[а-яё]{1,15}\s[А-ЯЁ]{1}[а-яё]{1,15}">
-                                    <span class="error" aria-live="polite"></span>
-                                    <label for="name_surname" class="form__label">Ваше Имя и Фамилия</label>
-                                </div>
+                <div class="row" >
+                    <div class="code">
+                        <h1 class="title-first">
+                            <span class="title-first__main">CLEAN TO WIN</span>
+                            <span class="title-first__secondary">ПРИСОЕДИНЯЙСЯ</span>
+                        </h1>
+                         <a href="https://web.telegram.org/k/#@clean_to_win_bot" target="_blank">
+                            <img
+                        src="{% static '/welcome/images/qr-code.png' %}"
 
-                                <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Ваш email" id="mail" required minlength="10">
-                                    <span class="error" aria-live="polite"></span>
-                                    <label for="mail" class="form__label">Ваш email</label>
-                                </div>
-
-                                <div class="form__group">
-                                    <button href="feedback.html" type="submit" class="btn btn_brown" >Войти</button>
-                                </div>
-
-                                <div class="form__group-chat">
-                                    <ul id="messages"></ul>
-                                </div>
-                            </form>
-                        </div>
+                        sizes="(max-width: 1240px) 23vw,
+                                (max-width: 900px) 43vw
+                                (max-width: 600px) 47vw, 300px"
+                        alt="Композиция-1"
+                        class="code__composition">
+                        </a>
                     </div>
                 </div>
             </section>
