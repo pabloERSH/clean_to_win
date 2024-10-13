@@ -30,32 +30,18 @@
 
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img 
-                            src="{% static '/welcome/images/composition_1.jpeg' %}"
-                             
-                            sizes="(max-width: 1240px) 23vw,
-                                    (max-width: 900px) 43vw
-                                    (max-width: 600px) 47vw, 300px"
-                            alt="Композиция-1" 
-                            class="composition__photo composition__photo_n1">
+                        {% with images_limited=images|slice:":3" %}
+                            {% for image in images_limited %}
+                                <img
+                                src="{% static image.image %}"
 
-                            <img 
-                            src="{% static '/welcome/images/composition_2.webp' %}"
-                            
-                            sizes="(max-width: 1240px) 23vw,
-                                    (max-width: 900px) 43vw
-                                    (max-width: 600px) 47vw, 300px"
-                            alt="Композиция-2" 
-                            class="composition__photo composition__photo_n2">
-
-                            <img 
-                            src="{% static '/welcome/images/composition_3.jpeg' %}"
-        
-                            sizes="(max-width: 1240px) 23vw,
-                                    (max-width: 900px) 43vw
-                                    (max-width: 600px) 47vw, 300px"
-                            alt="Композиция-3"
-                            class="composition__photo composition__photo_n3">
+                                sizes="(max-width: 1240px) 23vw,
+                                        (max-width: 900px) 43vw
+                                        (max-width: 600px) 47vw, 300px"
+                                alt="Композиция-{{ forloop.counter }}"
+                                class="composition__photo composition__photo_n{{ forloop.counter }}">
+                            {% endfor %}
+                        {% endwith %}
                         </div>
                     </div>
                 </div>
@@ -63,56 +49,67 @@
             </section>
 
             <section class="section-galary">
-                
                 <div class="text-align-center margin-bottom-80px">
                     <h2 class="title-secondary">
                         коллекция наших снимков
                     </h2>
                 </div>
+
                 <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__1"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__2"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__3"></div>
-                    </div>
+                    {% for i in "123456789012" %}
+                        <div class="col-1-of-3">
+                            <div class="galary_set_block__{{ forloop.counter }}"></div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                            </div><div class="row">
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__4"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__5"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__6"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__7"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__8"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__9"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__10"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__11"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="galary_set_block__12"></div>
-                    </div>
-                </div>
+
+<!--                <div class="row">-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__1"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__2"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__3"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__4"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__5"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__6"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__7"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__8"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__9"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__10"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__11"></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-1-of-3">-->
+<!--                        <div class="galary_set_block__12"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
                 <div class="text-align-center">
                     <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated" target="_blank">посмотреть все</a>
