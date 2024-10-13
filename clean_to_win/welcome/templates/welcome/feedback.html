@@ -15,19 +15,20 @@
                     <div class="feedBack-card">
                         <figure class="feedBack-card__img">
                             <img src="{% static feedback.avatar_path %}" alt="{{ feedback.username }}">
-                            <figcaption class="feedBack-card__name"> {{ feedback.username }} </figcaption>
+                            <figcaption class="feedBack-card__name">{{ feedback.username }}<br>
+                                <row class="feedBack-card__name__date">{{ feedback.created_at }}</row>
+                            </figcaption>
                         </figure>
                         <div class="feedBack-card__box">
                             <h3 class="title-third margin-bottom-10px">{{ feedback.short_msg }}</h3>
                             <p class="paragraph">{{ feedback.text }}</p>
                         </div>
-
                     </div>
                 </div>
                 {% endfor %}
 
                 <div class="text-align-center">
-                    <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated">Присоединиться к проекту</a>
+                    <a href="https://web.telegram.org/k/#@clean_to_win_bot" class="btn btn_animated" target="_blank">Присоединиться к проекту</a>
                 </div>
             </section>
         </main>

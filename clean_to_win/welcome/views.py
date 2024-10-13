@@ -9,6 +9,7 @@ menu = {
     'Главная': '../'
 }
 
+
 class Index(ListView):
     queryset = Feedback.objects.order_by('?')[:2]
     context_object_name = 'feedbacks'
@@ -18,6 +19,7 @@ class Index(ListView):
 class About(TemplateView):
     template_name = 'welcome/about.html'
     extra_context = {'menu': menu}
+
 
 class FeedBack(ListView):
     #model = Feedback

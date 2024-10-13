@@ -25,11 +25,10 @@
                     <div class="col-1-of-2">
                         <h3 class="title-third margin-bottom-10px">ИДЕЯ ПРИЛОЖЕНИЯ</h3>
                         <p class="paragraph margin-bottom-30px">Идея - приложение (CliN) - это помощник в решении одной из главных экологических проблем, а именно загрязнения окружающей среды.
-                            В приложении будет постоянно обновляться список заданий, за которые можно получить вознаграждение в виде купона или скидки у партнёров.
-                            .</p>
+                            В приложении будет постоянно обновляться список заданий, за которые можно получить вознаграждение в виде купона или скидки у партнёров.</p>
 
                         <h3 class="title-third margin-bottom-10px">КАК ИГРАТЬ</h3>
-                        <p class="paragraph margin-bottom-50px">Мы попытались сделать наш продукт в игровой форме (с уровнями, наградами и достижениями), чтобы охватить ещё и молодую аудиторию..</p>
+                        <p class="paragraph margin-bottom-50px">Мы попытались сделать наш продукт в игровой форме (с уровнями, наградами и достижениями), чтобы охватить ещё и молодую аудиторию.</p>
 
                         <a href="/gallery" class="btn-text">Узнать больше &rarr;</a>
                     </div>
@@ -217,7 +216,9 @@
                     <div class="feedBack-card">
                         <figure class="feedBack-card__img">
                             <img src="{% static feedback.avatar_path %}" alt="{{ feedback.username }}">
-                            <figcaption class="feedBack-card__name"> {{ feedback.username }} </figcaption>
+                            <figcaption class="feedBack-card__name"> {{ feedback.username }}
+                                <row class="feedBack-card__name__date">{{ feedback.created_at }}</row>
+                            </figcaption>
                         </figure>
                         <div class="feedBack-card__box">
                             <h3 class="title-third margin-bottom-10px">{{ feedback.short_msg }}</h3>
