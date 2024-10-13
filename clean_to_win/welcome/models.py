@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Gallery(models.Model):
+class GalleryImages(models.Model):
     name = models.CharField(max_length=100)
     image = models.CharField(max_length=255)
     description = models.TextField(blank=True)
