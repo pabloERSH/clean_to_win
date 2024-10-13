@@ -14,3 +14,12 @@ class Feedback(models.Model):
 
     def __str__(self):
         return f"{self.username} - {self.created_at.strftime('%Y-%m-%d %H:%M')}"
+
+class GalleryImages(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    upload_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

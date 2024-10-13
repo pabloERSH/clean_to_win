@@ -1,4 +1,6 @@
 from django.views.generic import TemplateView, ListView
+from .models import GalleryImages
+from django.views.generic import TemplateView, ListView
 
 from .models import Feedback
 
@@ -28,6 +30,18 @@ class FeedBack(ListView):
     context_object_name = 'feedbacks'
     extra_context = {'menu': menu}
 
-class Gallery(TemplateView):
+
+class Gallery(ListView):
+    model = GalleryImages
     template_name = 'welcome/gallery.html'
+    context_object_name = 'images'
     extra_context = {'menu': menu}
+
+    def get_queryset(self):
+        # Получаем 15 случайных объектов
+        return GalleryImages.objects.order_by("?")[:15]
+
+
+
+
+
