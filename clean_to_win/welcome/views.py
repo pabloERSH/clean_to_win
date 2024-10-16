@@ -38,13 +38,10 @@ class Gallery(ListView):
     model = GalleryImages
     template_name = 'welcome/gallery.html'
     context_object_name = 'images'
-    extra_context = {'menu': menu}
 
-    def get_queryset(self):
-        # Получаем 15 случайных объектов
-        return GalleryImages.objects.order_by("?")[:15]
-
-
-
-
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['menu'] = menu
+        context['compositions'] = GalleryImages.objects.filter(name__icontains='composition').order_by('?')[:3]
+        context['gallery'] = GalleryImages.objects.filter(name__icontains='Gallery').order_by('?')[:12]
+        return context
