@@ -10,11 +10,9 @@ class WelcomeTests(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        binary_yandex_driver_file = "D:\\Yandex Driver\\yandexdriver.exe"
-        options = webdriver.ChromeOptions()
-
-        service = Service(binary_yandex_driver_file)
-        cls.driver = webdriver.Chrome(service=service, options=options)
+        binary_edge_driver_file = "C:\\Users\\pave1\\Downloads\\msedgedriver.exe"
+        service = Service(binary_edge_driver_file)
+        cls.driver = webdriver.Edge(service=service)
         cls.driver.maximize_window()
 
     @classmethod
@@ -49,7 +47,7 @@ class WelcomeTests(LiveServerTestCase):
         link = self.driver.find_element(By.CSS_SELECTOR, 'a.btn.btn_animated')
 
         # Проверить, что ссылка существует и имеет правильный href
-        self.assertEqual(link.get_attribute('href'), 'https://web.telegram.org/k/#@clean_to_win_bot')
+        self.assertEqual(link.get_attribute('href'), 'https://t.me/clean_to_win_bot')
 
         # Открыть ссылку в новой вкладке
         link.click()
@@ -59,7 +57,7 @@ class WelcomeTests(LiveServerTestCase):
         self.driver.switch_to.window(self.driver.window_handles[1])
 
         # Проверить, что новая вкладка открылась с правильным URL
-        self.assertEqual(self.driver.current_url, 'https://web.telegram.org/k/#@clean_to_win_bot')
+        self.assertEqual(self.driver.current_url, 'https://t.me/clean_to_win_bot')
 
         # Закрыть новую вкладку
         self.driver.close()
@@ -193,5 +191,3 @@ class WelcomeTests(LiveServerTestCase):
         self.assertIn("Clean to win", self.driver.title)
         self.assertEqual(len(images), len(set(images)))
         self.assertEqual(roles, expected_roles)
-
-
