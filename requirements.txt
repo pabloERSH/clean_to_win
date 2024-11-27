@@ -12,3 +12,5 @@ rjsmin==1.2.2
 setuptools==75.1.0
 sqlparse==0.5.1
 tzdata==2024.2
+
+selenium~=4.27.1
