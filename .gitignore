@@ -396,4 +396,8 @@ pyrightconfig.json
 .history
 .ionide
 
+#ssl
+clean_to_win/cert.pem
+clean_to_win/key.pem
+
 # End of https://www.toptal.com/developers/gitignore/api/django,python,pycharm,visualstudiocode

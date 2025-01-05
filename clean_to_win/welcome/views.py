@@ -1,4 +1,3 @@
-from django.views.generic import TemplateView, ListView
 from .models import GalleryImages
 from django.views.generic import TemplateView, ListView
 
@@ -37,7 +36,6 @@ class FeedBack(ListView):
 class Gallery(ListView):
     model = GalleryImages
     template_name = 'welcome/gallery.html'
-    context_object_name = 'images'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
