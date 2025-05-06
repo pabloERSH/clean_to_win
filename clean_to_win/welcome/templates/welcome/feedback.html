@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <main>
+            <section class="section-feedBack">
+                <div class="bg-gradient"></div>
+                <div class="text-align-center margin-bottom-80px">
+                    <h1 class="title-first">
+                        <span class="title-first__main">отзывы наших клиентов</span>
+                    </h1>
+                </div>
+                {% for feedback in feedbacks %}
+                    <div class="row">
+                    <div class="feedBack-card">
+                        <figure class="feedBack-card__img">
+                            <img src="{% static feedback.avatar_path %}" alt="{{ feedback.username }}">
+                            <figcaption class="feedBack-card__name">{{ feedback.username }}<br>
+                                <row class="feedBack-card__name__date">{{ feedback.created_at }}</row>
+                            </figcaption>
+                        </figure>
+                        <div class="feedBack-card__box">
+                            <h3 class="title-third margin-bottom-10px">{{ feedback.short_msg }}</h3>
+                            <p class="paragraph">{{ feedback.text }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="text-align-center">
+                    <a href="https://t.me/clean_to_win_bot" class="btn btn_animated" target="_blank">Присоединиться к проекту</a>
+                </div>
+            </section>
+        </main>
+{% endblock %}
