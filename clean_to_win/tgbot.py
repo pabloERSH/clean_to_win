@@ -10,6 +10,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
+from decouple import config
 
 TOKEN = config('TOKEN')
 
@@ -22,8 +23,7 @@ async def command_start_handler(message: Message) -> None:
             [
                 InlineKeyboardButton(
                     text='Открыть приложение',
-                    #web_app=WebAppInfo(url=f'https://www.figma.com/proto/YBXDlyrBJPT3TADkyw0bBE/Clen-to-win?node-id=212-1843&node-type=canvas&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=212%3A1843')
-                    web_app=WebAppInfo(url=f'http://127.0.0.1:8000/app/main_page/')
+                    web_app=WebAppInfo(url=config('FIGMA_URL'))
                 )
             ]
         ]
